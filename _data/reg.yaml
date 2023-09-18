@@ -1,0 +1,10 @@
+groups:
+- slug: "Insulae Draconis-Dun in Mara"
+  name: "Dun in Mara"
+  where: "Dublin and the east coast"
+- slug: "Insulae Draconis-Eplaheimr"
+  name: "Eplaheimr"
+  where: "Midlands, west and south"
+- slug: "Insulae Draconis-Glen Rathlin"
+  name: "Glen Rathlin"
+  where: "Province of Ulster"

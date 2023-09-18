@@ -1,0 +1,62 @@
+				<br />
+			</div>
+
+
+			<nav id="footer" class="navbar navbar-expand-lg bg-primary " style="color: #ffffff">
+
+        <div class="container">
+					<div class="row">
+
+						<div class="col-12 align-middle">
+
+							<br />
+
+							<ul class="list-inline">
+								<li class="list-inline-item pe-3">
+									<a href="https://www.facebook.com/groups/852081332478787/" class="text-reset"><i class="fab fa-facebook"></i> Facebook</a>
+								</li>
+								<li class="list-inline-item pe-3">
+									<a href="mailto:{{ site.email }}" class="text-reset"><i class="fas fa-envelope"></i> Email</a>
+								</li>
+							</ul>
+
+							{% if site.github.repository_url %}
+								<ul class="list-inline">
+									<li class="list-inline-item pe-3">
+										<a href="{{site.github.repository_url}}/blob/main/{{ page.path }}" class="text-reset"><i class="fab fa-fw fa-github"></i> Edit this page on GitHub</a>
+									</li>
+									<li class="list-inline-item pe-3">
+										<a href="{{site.github.repository_url}}/issues/new?body=Path%3A%20{{ page.url }}%0D" class="text-reset"><i class="fab fa-fw fa-github"></i> Open an issue on GitHub</a>
+									</li>
+								</ul>
+							{% endif %}
+
+							<ul class="list-inline">
+								<li class="list-inline-item pe-3">
+									<a href="https://drachenwald.sca.org" class="text-reset"><i class="fa-solid fa-globe"></i> Drachenwald (SCA Europe)</a>
+								</li>
+								<li class="list-inline-item pe-3">
+									<a href="https://sca.org" class="text-reset"><i class="fa-solid fa-globe"></i> SCA.org (Rest of World)</a>
+								</li>
+							</ul>
+
+							<div>
+								&copy; <script>document.write(new Date().getFullYear());</script>.
+								This is a subsite of the recognised web site for the
+								Kingdom of Drachenwald in the
+								<a href="https://www.sca.org/" class="text-reset">Society for Creative Anachronism</a>. 
+								Copyright on all content and images remains with the creators.
+							</div>
+
+							<br />
+						</div>
+
+
+					</div>
+
+        </div>
+
+      </nav>
+
+	</body>
+</html>

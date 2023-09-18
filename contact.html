@@ -1,0 +1,37 @@
+---
+title: Contacts
+---
+
+<link rel="preconnect" href="https://dis.drachenwald.sca.org" />
+
+<div class="text-center pb-3">
+  <a href="{% link index.html %}" class="btn btn-primary"><i class="fa-solid fa-calendar-days"></i> See upcoming events</a>
+</div>
+
+
+{% for group in site.data.reg.groups %}
+  {% assign groupdata = site.data.remote.groups | where: 'group', group.name | first %}
+  <div class="mb-4">
+    <h2>
+      {% if groupdata.status == "Region" %}
+        {{ group.name }} {{ groupdata.status }}
+      {% else %}
+        {{ groupdata.status }} of {{ group.name }}
+      {% endif %}
+    </h2>
+    
+    <p><i>{{ groupdata.region }}</i></p>
+    
+    <div class="dw-live-officers" lang="en" display="compact"
+      group="{{ group.slug}}">
+      Loading...
+    </div>
+
+    {% unless groupdata.website == "" %}
+    <a href="{{ groupdata.website }}" class="btn btn-primary mt-3"><i class="fa-solid fa-globe"></i> Visit {{ groupdata.group }} website</a>
+    {% endunless %}
+  </div>
+{% endfor %}
+
+
+<script src="https://scripts.drachenwald.sca.org/regnum/regnum-fetch.js"></script>

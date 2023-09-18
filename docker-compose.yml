@@ -1,0 +1,10 @@
+version: '3'
+services:
+  jekyll-central:
+    build: .
+    ports:
+    - "127.0.0.1:4000:4000"
+    - "127.0.0.1:35729:35729"
+    volumes:
+    - .:/build
+    command: bash -c "curl -o _data/remote/groups.json https://dis.drachenwald.sca.org/data/regnum-groups.json && bundle update --bundler && bundle install && bundle exec jekyll serve --livereload --watch --host 0.0.0.0"
